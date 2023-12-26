@@ -37,10 +37,18 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true , name = "Text Android")
 @Composable
-fun GreetingPreview() {
+fun GreetingAndroidPrevie() {
     App_androidTheme {
         Greeting("Android")
+    }
+}
+
+@Preview(showBackground = true, name = "Text iOS")
+@Composable
+fun GreetingIosPreview() {
+    App_androidTheme {
+        Greeting(name = "iOS")
     }
 }
