@@ -26,27 +26,48 @@ class MainActivity : ComponentActivity() {
         setContent {
             App_androidTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background,
-                ) {
-                    Greeting("Android & iOS")
+                Surface {
+                    MyApp()
                 }
-//               MyApp(modifier = Modifier.fillMaxSize())
             }
         }
     }
 }
 
 @Composable
+fun MyApp(
+    modifier: Modifier = Modifier,
+    names: List<String> = listOf("World", "Compose")
+) {
+    Column(modifier = modifier.padding(vertical = 4.dp)) {
+        for (name in names) {
+            Greeting(name = name)
+        }
+    }
+}
+
+@Composable
 fun Greeting(name: String) {
+    val expanded = remember { mutableStateOf(false) }
+    val extraPadding = if (expanded.value) 48.dp else 0.dp
+
     Surface(
         color = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(vertical = 4.dp, horizontal = 8.dp)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(24.dp)) {
-            Text(text = "Hello, ")
-            Text(text = name)
+        Row(modifier = Modifier.padding(24.dp)) {
+            Column(modifier = Modifier
+                .weight(1f)
+                .padding(bottom = extraPadding)
+            ) {
+                Text(text = "Hello, ")
+                Text(text = "Atsutama!")
+            }
+            ElevatedButton(
+                onClick = { expanded.value = !expanded.value }
+            ) {
+                Text(if (expanded.value) "Show less" else "Show more")
+            }
         }
     }
 }
@@ -93,18 +114,6 @@ fun GreetingPreview() {
 //        color = MaterialTheme.colorScheme.background
 //    ) {
 //        Greeting("Android TV")
-//    }
-//}
-
-//@Composable
-//fun MyApp(
-//    modifier: Modifier = Modifier,
-//    names: List<String> = listOf("World", "Compose")
-//) {
-//    Column(modifier = modifier.padding(vertical = 4.dp)) {
-//        for (name in names) {
-//            Greeting(name = name)
-//        }
 //    }
 //}
 
