@@ -1,7 +1,5 @@
 # app_android
 
-# Atsutama2 Androidアプリ README
-
 ## 概要
 Jetpack Composeを使用して設計されたAndroidアプリについての概要を提供します。
 応答性が高くインタラクティブなユーザーインターフェースを特徴とし、歓迎のオンボーディング画面と動的な挨拶リストが含まれています。
