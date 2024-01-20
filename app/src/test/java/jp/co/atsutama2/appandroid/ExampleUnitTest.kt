@@ -1,4 +1,4 @@
-package jp.co.atsutama2.app_android
+package jp.co.atsutama2.appandroid
 
 import org.junit.Test
 

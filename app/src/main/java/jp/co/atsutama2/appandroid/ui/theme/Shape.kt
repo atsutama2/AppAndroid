@@ -1,4 +1,4 @@
-package jp.co.atsutama2.app_android.ui.theme
+package jp.co.atsutama2.appandroid.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

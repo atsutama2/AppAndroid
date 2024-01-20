@@ -1,4 +1,4 @@
-package jp.co.atsutama2.app_android.ui.theme
+package jp.co.atsutama2.appandroid.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

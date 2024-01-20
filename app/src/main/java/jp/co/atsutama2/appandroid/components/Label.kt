@@ -1,4 +1,4 @@
-package jp.co.atsutama2.app_android.components
+package jp.co.atsutama2.appandroid.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
