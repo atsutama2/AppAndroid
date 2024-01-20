@@ -1,4 +1,4 @@
-# appAndroid
+# AppAndroid
 
 ## 概要
 Android開発でのテストアプリ用のリポジトリ
